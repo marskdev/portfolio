@@ -1,0 +1,127 @@
+mixin social-nav(items)
+  ul.social-nav
+    each item in items
+      li.social-nav__item
+        a.social-nav__link(href=item.link target="_blank")
+          i.fab(class=item.icon)
+
+mixin navbar(items)
+  ul.navbar
+    li.navbar__item.navbar__item--position
+      button(type="button")#navbar-toggler.navbar__toggler.navbar__toggler--collapsed.navbar__link
+        i.navbar__toggler-icon.navbar__toggler-icon-menu
+    each item in items
+      li.navbar__item
+        a.navbar__link(href=item.link class=item.class)
+          i.material-icons.navbar__icon #{item.icon}
+          span.navbar__text #{item.title}
+
+mixin list(items)
+  ul.skills__list.list
+    each item in items
+      li.list__item #{item}
+
+mixin tag-list(items)
+  ul.tag-list
+    each item in items
+      li.tag-list__item
+        i.tag-list__icon(class=item.class)
+        span.tag-list__text #{item.title}
+
+mixin category-list(items)
+  ul.category-list
+    each item, index in items
+      if index === 0
+        li.category-list__item
+          button.category-list__button.category-list__button--active #{item}
+      else
+        li.category-list__item
+          button.category-list__button #{item}
+
+mixin project(item)
+  .project
+    .project__cover
+      a(href=item.links[item.links.length-1].link)
+        picture
+          img(src=item.cover, alt=item.alt)
+    .project__content
+      a(href=item.links[1].link).project__title
+        h3 #{item.title}
+      p.project__desc #{item.desc}
+      ul.project__tech-list
+        each tech in item.techs
+          li #{tech}
+      ul.project__link-list
+        each link in item.links
+          li.project__link-item
+            a.project__link(href=link.link)
+              i.project__icon(class=link.icon)
+
+//- mixin slider(items)
+//-   .slider
+//-     .slider__content
+//-       each item, index in items
+//-         if index === 0
+//-           .slider__item.slider__item--active
+//-             +project(item)
+//-         else if index === items.length-1
+//-           .slider__item.slider__item--out
+//-             +project(item)
+//-         else
+//-           .slider__item
+//-             +project(item)
+//-     .slider__indicator
+//-       each item, index in items
+//-         if index === 0
+//-           button(type="button").slider__dot.slider__dot--active
+//-         else
+//-           button(type="button").slider__dot
+//-     .slider__control
+//-       button(type="button").slider__btn.slider__prev
+//-         span.material-icons-round arrow_back_ios
+//-       button(type="button").slider__btn.slider__next
+//-         span.material-icons-round arrow_forward_ios
+
+mixin post-card(item)
+  .post-card
+    header
+      .post-card__top
+        span.post-card__icon.material-icons-outlined description
+        .post-card__links
+          a(href=item.link).fas.fa-external-link-alt
+      a(href=item.link).post-card__title
+        h3 #{item.title}
+      .post-card__desc
+        p #{item.desc}
+    footer
+      ul.post-card__tag-list
+        each tag in item.tags
+          li.post-card__tag #{tag}
+
+mixin carousel(items)
+  .carousel
+    ul.carousel__content
+      each item, index in items
+        if index === 0
+          li.carousel__item.carousel__item--active
+            +post-card(item)
+        else
+          li.carousel__item
+            +post-card(item)
+
+mixin form
+  form.form(name="contact" method="POST" data-netlify="true")
+    input(type="hidden" name="form-name" value="contact")
+    .form__info
+      .form__item
+        label(for="name")
+          i.material-icons-outlined person
+        input(type="text" name="name" id="name" required placeholder="What is your name?")
+      .form__item
+        label(for="email")
+          i.material-icons-outlined email
+        input(type="email" name="email" id="email" required placeholder="What is your email?")
+    .form__item
+      label(for="message")
+      textarea(name="", cols="30", rows="5" required placeholder="Tell me what you think about my work")
+    input(type="submit" value="Let's talk").btn

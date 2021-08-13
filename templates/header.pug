@@ -1,0 +1,15 @@
+include components
+
+header.header
+  a.header__link(href="/")
+    // Branding
+    p.logo.logo--top
+      span M
+      span.gradient-t D
+  nav.header__navbar
+    +navbar([
+      {"link": "#about", "class": "about","icon": "person","title": "About"},
+      {"link": "#skills", "class": "skills","icon": "handyman","title": "Skills"},
+      {"link": "#projects", "class": "projects","icon": "home_repair_service","title": "Portfolio"},
+      {"link": "#blogposts", "class": "blogposts","icon": "library_books","title": "Blog"},
+      {"link": "#contact2", "class": "contact","icon": "mail","title": "Contact"}])

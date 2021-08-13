@@ -1,0 +1,146 @@
+include templates/components
+include templates/components
+
+
+doctype html
+html(lang="es")
+  include templates/head
+  body.theme
+    include templates/header
+    main.content
+      // Hero
+      section#hero.hero
+        span.hero__overline.overline.gradient-t Hola, mi nombre es
+        h1.hero__headline Marcial Ambriz.
+        h2.hero__headline Soy 
+          span.gradient-t.typed-text
+          span.cursor &nbsp;
+        p.hero__desc Soy un desarrollador web frontend y diseñador UI/UX enfocado en productos digitales en la accesibilidad y centrados en el usuario.
+        .hero__cta
+          a.btn(href="#contact") Trabajemos Juntos!
+        a.hero__scroll.scroll--desktop(href="#about")
+          span.scroll__text Scroll down
+          i.scroll__icon.material-icons arrow_downward
+        a.hero__scroll.scroll--mobile(href="#about")
+          span.scroll__text Swipe up
+          i.scroll__icon.material-icons arrow_upward
+      // About me
+      section#about.about
+        .about__content
+          h2.about__title.headline Un poco sobre mí
+          p.about__text Mi nombre es Marcial Ambriz y soy un desarrollador Web. Disfruto crear proyectos y experimentar utilizando tecnologías web.
+          p.about__text Comencé como desarrollador web desde el 2020 haciendo pequeñas cosas en 
+            a(href="https://codepen.io/marskdev/") Codepen
+            span  y 
+            a(href="https://github.com/marskdev/") Github.
+          p.about__text Ahora hago uso de mi tiempo libre para aprender acerca de diseño de interfaces y experiencias de usuario UX/UI para usarlos en mis próximos trabajos y proyectos.
+          .about__cta
+            a.btn.btn--outlined(href="static/resume.pdf") Ver Curriculum
+        .about__me
+          picture
+            img(src="static/images/me.jpg", alt="Marcial Ambriz")
+          +social-nav([
+            {"link": "https://github.com/marskdev/", "icon": "fa-github"},
+            {"link": "https://behance.net/marskdev/", "icon": "fa-behance"},
+            {"link": "https://codepen.io/marskdev/", "icon": "fa-codepen"},
+            {"link": "https://instagram.com/marskdev/", "icon": "fa-instagram"}])
+          span.overline.gradient-t Follow my work!
+      // Skills
+      section#skills.skills
+        h2.skills__title.headline Skills, technologies & tools
+        .skills__content
+          .skills__soft
+            h3.overline.gradient-t Soft Skills
+            +list(["Comunicación",
+              "Adaptabilidad",
+              "Colaboración",
+              "Design Thinking",
+              "Deseo de aprender",
+              "Flexibilidad",
+              "Innovación",
+              "Solución de problemas",
+              "Research",
+              "Empatico",
+              "Curioso"])
+          .skills__hard
+            .skills__tech
+              h3.overline.gradient-t Technologies
+              +tag-list([
+                {"title": "HTML", "class": "fab fa-html5"},
+                {"title": "CSS", "class": "fab fa-css3-alt"},
+                {"title": "Javascript", "class": "fab fa-js-square"},
+                {"title": "Sass", "class": "fab fa-sass"},
+                {"title": "Node.js", "class": "fab fa-node"},
+                {"title": "Bootstrap", "class": "fab fa-bootstrap"},
+                {"title": "NPM", "class": "fab fa-npm"},
+                {"title": "React.js", "class": "fab fa-react"},
+                {"title": "MySQL", "class": "fas fa-database"},
+                {"title": "Fontawesome", "class": "fab fa-font-awesome-flag"}])
+            .skills__tool
+              h3.overline.gradient-t Tools
+              +tag-list([
+                {"title": "Figma", "class": "fab fa-figma"},
+                {"title": "Photoshop", "class": "icon-photoshop"},
+                {"title": "Illustrator", "class": "icon-illustrator" },
+                {"title": "Jira", "class": "fab fa-jira"},
+                {"title": "Linux", "class": "fab fa-linux" },
+                {"title": "Slack", "class": "fab fa-slack"},
+                {"title": "Git", "class": "fab fa-git-alt"}])
+        a.skills__cta.btn.btn-outlined(href="#contact") Ponerme en contacto
+      // Projects
+      section#projects.projects
+        h2.projects__title.headline Some projects I done
+        +project(
+          {"title": "Delivery App UI",
+          "desc": "Este es un diseño de una aplicación sobre delivery. Use Adobe XD para hacer este proyecto.",
+          "cover": "static/images/project1.jpg",
+          "alt": "Delivery App UI",
+          "techs": ["Adobe XD"],
+          "links": [{"link": "https://www.behance.net/gallery/125018449/Delivery-App", "icon": "fab fa-behance-square"}, {"link": "https://www.behance.net/gallery/125018449/Delivery-App", "icon": "fas fa-external-link-alt"}]})
+
+        +project({"title": "Redesign Kai Page",
+          "desc": "Rediseño de la pagina de aterrizaje de la empresa kai delivery, mejor uso de colores, optimización en la jerarquía de encabezados y layout mejor estructurado.",
+          "cover": "static/images/project2.jpg",
+          "alt": "Kai delivery redesign",
+          "techs": ["Bootstrap"],
+          "links": [{"link": "https://github.com/marskdev/kai-delivery-clone-boost", "icon": "fab fa-github"}, {"link": "https://marskdev.github.io/kai-delivery-clone-boost/", "icon": "fas fa-external-link-alt"}]})
+
+        +project({"title": "Caja Popular Redesign",
+          "desc": "Propuesta de rediseño de la actual aplicación de la caja popular Cristóbal Colón",
+          "cover": "static/images/project3.jpg",
+          "alt": "Caja Popular Cristóbal Colón Redesign",
+          "techs": ["Figma"],
+          "links": [{"link": "https://www.behance.net/gallery/125020239/Caja-Cristobal-Colon-Redesign", "icon": "fab fa-behance-square"}, {"link": "https://www.behance.net/gallery/125020239/Caja-Cristobal-Colon-Redesign", "icon": "fas fa-external-link-alt"}]})
+      // Blogposts
+      section#blogposts.blogposts
+        h2.blogposts__title.headline I wrote a little things
+        +post-card({"title": "Metodologías CSS",
+          "desc": "Recopilación de metodologías en la codificación de código CSS para la optimización de los estilos.",
+          "link": "https://dev.to/marskdev/metodologias-css-2pg2",
+          "tags" :["CSS", "Frontend"]})
+        +post-card({"title": "Buenas prácticas CSS",
+            "desc": "Estas son buenas prácticas para el desarrollo de estilos CSS para sitios web",
+            "link": "https://dev.to/marskdev/buenas-practicas-en-css-4a8d",
+            "tags" :["CSS","Frontend"]})
+        +post-card({"title": "Post 3",
+          "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non sit porro voluptatem odit numquam corrupti?",
+          "link": "https://samplelink.com",
+          "tags" :["UX/UI", "Pallete", "Figma"]})
+      // Contact
+      section#contact.contact
+        h2.contact__title.headline#contact2 Let's work together
+        p.contact__desc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto saepe pariatur veniam necessitatibus cum asperiores.
+        +form
+        span.contact__mail mackial.dev@gmail.com
+    include templates/footer
+
+    script(src='assets/js/index.js')
+
+
+
+
+
+
+
+
+
