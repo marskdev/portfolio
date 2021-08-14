@@ -15,7 +15,7 @@ html(lang="es")
         h2.hero__headline Soy 
           span.gradient-t.typed-text
           span.cursor &nbsp;
-        p.hero__desc Soy un desarrollador web frontend y diseñador UI/UX enfocado en productos digitales en la accesibilidad y centrados en el usuario.
+        p.hero__desc Soy un desarrollador web frontend y diseñador UI/UX enfocado en la accesibilidad de productos digitales y diseño centrado en el usuario.
         .hero__cta
           a.btn(href="#contact") Trabajemos Juntos!
         a.hero__scroll.scroll--desktop(href="#about")
@@ -47,10 +47,10 @@ html(lang="es")
           span.overline.gradient-t Follow my work!
       // Skills
       section#skills.skills
-        h2.skills__title.headline Skills, technologies & tools
+        h2.skills__title.headline Habilidades y herramientas que uso
         .skills__content
           .skills__soft
-            h3.overline.gradient-t Soft Skills
+            h3.overline.gradient-t Habilidades blandas
             +list(["Comunicación",
               "Adaptabilidad",
               "Colaboración",
@@ -64,7 +64,7 @@ html(lang="es")
               "Curioso"])
           .skills__hard
             .skills__tech
-              h3.overline.gradient-t Technologies
+              h3.overline.gradient-t Tecnologías
               +tag-list([
                 {"title": "HTML", "class": "fab fa-html5"},
                 {"title": "CSS", "class": "fab fa-css3-alt"},
@@ -77,7 +77,7 @@ html(lang="es")
                 {"title": "MySQL", "class": "fas fa-database"},
                 {"title": "Fontawesome", "class": "fab fa-font-awesome-flag"}])
             .skills__tool
-              h3.overline.gradient-t Tools
+              h3.overline.gradient-t Herramientas
               +tag-list([
                 {"title": "Figma", "class": "fab fa-figma"},
                 {"title": "Photoshop", "class": "icon-photoshop"},
@@ -86,10 +86,10 @@ html(lang="es")
                 {"title": "Linux", "class": "fab fa-linux" },
                 {"title": "Slack", "class": "fab fa-slack"},
                 {"title": "Git", "class": "fab fa-git-alt"}])
-        a.skills__cta.btn.btn-outlined(href="#contact") Ponerme en contacto
+        a.skills__cta.btn.btn-outlined(href="#contact") Ponte en contacto
       // Projects
       section#projects.projects
-        h2.projects__title.headline Some projects I done
+        h2.projects__title.headline Algunos proyectos que he creado
         +project(
           {"title": "Delivery App UI",
           "desc": "Este es un diseño de una aplicación sobre delivery. Use Adobe XD para hacer este proyecto.",
@@ -113,7 +113,7 @@ html(lang="es")
           "links": [{"link": "https://www.behance.net/gallery/125020239/Caja-Cristobal-Colon-Redesign", "icon": "fab fa-behance-square"}, {"link": "https://www.behance.net/gallery/125020239/Caja-Cristobal-Colon-Redesign", "icon": "fas fa-external-link-alt"}]})
       // Blogposts
       section#blogposts.blogposts
-        h2.blogposts__title.headline I wrote a little things
+        h2.blogposts__title.headline También escribo algunas veces
         .blogposts__content
           +post-card({"title": "Metodologías CSS",
             "desc": "Recopilación de metodologías en la codificación de código CSS para la optimización de los estilos.",
@@ -123,16 +123,14 @@ html(lang="es")
               "desc": "Estas son buenas prácticas para el desarrollo de estilos CSS para sitios web",
               "link": "https://dev.to/marskdev/buenas-practicas-en-css-4a8d",
               "tags" :["CSS","Frontend"]})
-          +post-card({"title": "Post 3",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non sit porro voluptatem odit numquam corrupti?",
-            "link": "https://samplelink.com",
-            "tags" :["UX/UI", "Pallete", "Figma"]})
       // Contact
       section#contact.contact
-        h2.contact__title.headline#contact2 Let's work together
-        p.contact__desc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto saepe pariatur veniam necessitatibus cum asperiores.
+        h2.contact__title.headline#contact2 Ponte en contacto
+        p.contact__desc Enviame tu propuesta o solo envía un saludo. La mejor manera de comunicarte conmigo es via DM en 
+          a(href="https://instagram.com/marskdev/") instagram
+          |  o solo pasa a saludar.
         +form
-        span.contact__mail mackial.dev@gmail.com
+        span.contact__mail marskdev@gmail.com
     include templates/footer
 
     script(src='assets/js/index.js')

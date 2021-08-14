@@ -57,6 +57,14 @@
     max-width: 80%;
     margin: 0 auto;
   }
+  .scroll {
+    &--desktop {
+      display: flex;
+    }
+    &--mobile {
+      display: none;
+    }
+  }
   .overline {
     font-size: $fs-md;
   }
@@ -114,7 +122,6 @@
           border-radius: .2rem;
           transition: .5s;
           &:hover {
-            filter: blur(1px);
             transform: scale(1.1,1.1);
           }
         }
@@ -226,7 +233,6 @@
           border-radius: .2rem;
           transition: .5s;
           &:hover {
-            filter: blur(1px);
             transform: scale(1.1,1.1);
           }
         }

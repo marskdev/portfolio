@@ -34,6 +34,11 @@ h5 {
   margin: 0;
 }
 
+p a {
+  color: #C7C7DB;
+  font-weight: 600;
+}
+
 p {
   line-height: 1.5;
   margin-top: 0;
@@ -216,10 +221,6 @@ section {
 /*    ||  ABOUT     */
 .about__content {
   margin-bottom: 7rem;
-}
-.about__text a {
-  color: #C7C7DB;
-  font-weight: 600;
 }
 .about__cta {
   text-align: center;
@@ -767,6 +768,13 @@ section {
     margin: 0 auto;
   }
 
+  .scroll--desktop {
+    display: flex;
+  }
+  .scroll--mobile {
+    display: none;
+  }
+
   .overline {
     font-size: 1.25rem;
   }
@@ -826,7 +834,6 @@ section {
     transition: 0.5s;
   }
   .project__cover picture img:hover {
-    filter: blur(1px);
     transform: scale(1.1, 1.1);
   }
   .project__content {
@@ -933,7 +940,6 @@ section {
     transition: 0.5s;
   }
   .project__cover picture img:hover {
-    filter: blur(1px);
     transform: scale(1.1, 1.1);
   }
   .project__tech-list {
