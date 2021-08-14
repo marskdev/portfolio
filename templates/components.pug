@@ -41,11 +41,11 @@ mixin category-list(items)
 mixin project(item)
   .project
     .project__cover
-      a(href=item.links[item.links.length-1].link)
+      a(href=item.links[item.links.length-1].link target="_blank")
         picture
           img(src=item.cover, alt=item.alt)
     .project__content
-      a(href=item.links[1].link).project__title
+      a(href=item.links[1].link target="_blank").project__title
         h3 #{item.title}
       p.project__desc #{item.desc}
       ul.project__tech-list
@@ -54,7 +54,7 @@ mixin project(item)
       ul.project__link-list
         each link in item.links
           li.project__link-item
-            a.project__link(href=link.link)
+            a.project__link(href=link.link target="_blank")
               i.project__icon(class=link.icon)
 
 //- mixin slider(items)
@@ -88,8 +88,8 @@ mixin post-card(item)
       .post-card__top
         span.post-card__icon.material-icons-outlined description
         .post-card__links
-          a(href=item.link).fas.fa-external-link-alt
-      a(href=item.link).post-card__title
+          a(href=item.link target="_blank").fas.fa-external-link-alt
+      a(href=item.link target="_blank").post-card__title
         h3 #{item.title}
       .post-card__desc
         p #{item.desc}
