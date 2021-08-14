@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*
-* Project: MarskDev
-* Description: Web Portfolio
+* Project: Portfolio
+* Description: Personal Web Portfolio for MarskDev
 * Author: Marcial Ambriz
 * Author URI: --------------
-* Project URI: --------------
-* Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+* Project URI: https://github.com/marskdev/portfolio
+* License: MIT (https://github.com/marskdev/portfolio/blob/main/LICENSE)
 */
 *, ::after, ::before {
   box-sizing: border-box;
@@ -632,11 +632,6 @@ section {
   background-color: #30334A;
 }
 
-/*    ||  MOBILE-FIRST MEDIA QUERIES     */
-/*      Media query sample         */
-@media screen and (min-width: 480px) {
-  /*CSS for medium width screens*/
-}
 /*    ||  ANIMATIONS     */
 @keyframes fade-in-delayed {
   from {
@@ -670,4 +665,9 @@ section {
   100% {
     background-color: #A8A8C7;
   }
+}
+/*    ||  MOBILE-FIRST MEDIA QUERIES     */
+/*      Media query sample         */
+@media screen and (min-width: 480px) {
+  /*CSS for medium width screens*/
 }

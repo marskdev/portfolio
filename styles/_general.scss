@@ -1,0 +1,80 @@
+
+@import 'variables';
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+/*    ||  GENERALS STYLES     */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-headline;
+  margin: 0;
+}
+
+p {
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+[type="submit"] {
+  cursor: pointer;
+}
+
+button {
+  border-radius: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+input,
+textarea {
+  outline: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+section {
+  padding: 4rem 0;
+}
+/*
+section {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 150px 0;
+} */

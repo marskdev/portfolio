@@ -1,0 +1,134 @@
+@import 'variables';
+
+/*    ||  HERO     */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  &__overline {
+    margin-bottom: 1.2rem;
+  }
+  &__headline {
+    font-size: $fs-heading-mobile;
+    font-weight: 800;
+    line-height: 1;
+  }
+  h1 {
+    color: $lightest-slate;
+  }
+  .cursor {
+    display: inline-block;
+    background-color: #A8A8C7;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  .typing {
+    animation: none;
+  }
+  &__desc {
+    margin-top: 1.2rem;
+  }
+  &__cta {
+    margin-top: 2rem;
+  }
+  &__scroll {
+    opacity: 0;
+    color: $light-slate;
+    background-color: $dark-slate;
+    padding: .5rem .7rem .5rem 1rem;
+    border-radius: 2rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fade-in-delayed .5s linear 5s forwards, up-down .8s linear 5.5s infinite alternate;
+  }
+}
+
+.scroll {
+  &--desktop {
+    display: none;
+  }
+  &__text {
+    margin-right: .2rem;
+  }
+}
+
+/*    ||  ABOUT     */
+
+.about {
+  &__content {
+    margin-bottom: 7rem;
+  }
+  &__text {
+    a {
+      color: $light-slate;
+      font-weight: 600;
+    }
+  }
+  &__cta {
+    text-align: center;
+    padding-top: 2.5rem;
+  }
+  &__me {
+    text-align: center;
+    picture {
+      margin: 0 auto;
+      display: block;
+      width: 15rem;
+      img {
+        border-radius: $border-radius;
+      }
+    }
+  }
+}
+
+/*    ||  SKILLS     */
+
+.skills {
+  &__soft {
+    margin-bottom: 2.5rem;
+  }
+  &__hard > div {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/*    ||  CONTACT     */
+
+#contact {
+  padding-top: .2rem;
+}
+
+.contact {
+  &__title {
+    padding-top: 3.8rem;
+  }
+  &__mail {
+    display: none;
+  }
+}
+
+/*    ||  FOOTER     */
+
+.footer {
+  margin-top: 5rem;
+  text-align: center;
+  padding-bottom: 4.5rem;
+  & > p {
+    margin: 2rem 0 .2rem;
+  }
+  & > span {
+    font-size: $fs-xs;
+    color: $slate;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+}
