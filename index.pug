@@ -99,7 +99,7 @@ html(lang="es")
           "links": [{"link": "https://www.behance.net/gallery/125018449/Delivery-App", "icon": "fab fa-behance-square"}, {"link": "https://www.behance.net/gallery/125018449/Delivery-App", "icon": "fas fa-external-link-alt"}]})
 
         +project({"title": "Redesign Kai Page",
-          "desc": "Rediseño de la pagina de aterrizaje de la empresa kai delivery, mejor uso de colores, optimización en la jerarquía de encabezados y layout mejor estructurado.",
+          "desc": "Rediseño de la pagina de aterrizaje de la empresa kai delivery, optimización en la jerarquía de encabezados y layout mejor estructurado.",
           "cover": "static/images/project2.jpg",
           "alt": "Kai delivery redesign",
           "techs": ["Bootstrap"],
@@ -114,18 +114,19 @@ html(lang="es")
       // Blogposts
       section#blogposts.blogposts
         h2.blogposts__title.headline I wrote a little things
-        +post-card({"title": "Metodologías CSS",
-          "desc": "Recopilación de metodologías en la codificación de código CSS para la optimización de los estilos.",
-          "link": "https://dev.to/marskdev/metodologias-css-2pg2",
-          "tags" :["CSS", "Frontend"]})
-        +post-card({"title": "Buenas prácticas CSS",
-            "desc": "Estas son buenas prácticas para el desarrollo de estilos CSS para sitios web",
-            "link": "https://dev.to/marskdev/buenas-practicas-en-css-4a8d",
-            "tags" :["CSS","Frontend"]})
-        +post-card({"title": "Post 3",
-          "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non sit porro voluptatem odit numquam corrupti?",
-          "link": "https://samplelink.com",
-          "tags" :["UX/UI", "Pallete", "Figma"]})
+        .blogposts__content
+          +post-card({"title": "Metodologías CSS",
+            "desc": "Recopilación de metodologías en la codificación de código CSS para la optimización de los estilos.",
+            "link": "https://dev.to/marskdev/metodologias-css-2pg2",
+            "tags" :["CSS", "Frontend"]})
+          +post-card({"title": "Buenas prácticas CSS",
+              "desc": "Estas son buenas prácticas para el desarrollo de estilos CSS para sitios web",
+              "link": "https://dev.to/marskdev/buenas-practicas-en-css-4a8d",
+              "tags" :["CSS","Frontend"]})
+          +post-card({"title": "Post 3",
+            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non sit porro voluptatem odit numquam corrupti?",
+            "link": "https://samplelink.com",
+            "tags" :["UX/UI", "Pallete", "Figma"]})
       // Contact
       section#contact.contact
         h2.contact__title.headline#contact2 Let's work together

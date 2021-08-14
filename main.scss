@@ -7,16 +7,249 @@
 * License: MIT (https://github.com/marskdev/portfolio/blob/main/LICENSE)
 */
 
+
 @import 'styles/variables';
 @import 'styles/general';
 @import 'styles/utilities';
 @import 'styles/layout';
-@import 'styles/components';
 @import 'styles/animations';
+@import 'styles/components';
 
 /*    ||  MOBILE-FIRST MEDIA QUERIES     */
 
-/*      Media query sample         */
-@media screen and (min-width: 480px) {
-  /*CSS for medium width screens*/
+@media screen and (min-width: 478px) {
+  .content {
+    padding: 0 1.75rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  body {
+    font-size: $fs-sm;
+  }
+  .content {
+    padding: 0 6rem;
+  }
+  .hero__headline {
+    font-size: $fs-heading-tablet;
+  }
+  .navbar--show {
+    width: calc(55% - 2.5rem);
+  }
+  .project__desc {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content {
+    padding: 0 8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: $fs-sm;
+  }
+  section {
+    padding: 7rem 0;
+  }
+  .content {
+    padding: 0;
+    padding-left: 3.5rem;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .overline {
+    font-size: $fs-md;
+  }
+  .headline {
+    font-size: $fs-xxl;
+  }
+  .hero {
+    &__headline {
+      font-size: $fs-heading-desktop;
+    }
+    &__desc {
+      width: 70%;
+    }
+  }
+  .header {
+    position: fixed;
+    &__navbar {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    &__menu {
+      display: none;
+    }
+  }
+  .about__content{
+    padding: 0 3rem;
+  }
+  .about__me {
+    picture {
+      width: initial;
+    }
+  }
+  .skills {
+    &__list {
+      width: 70%;
+    }
+    &__hard {
+      display: flex;
+      justify-content: space-between;
+      > div {
+      width: 48%;
+      }
+    }
+  }
+
+  .project {
+    display: flex;
+    margin: 2rem 0 4rem;
+    &__cover {
+      width: 40%;
+      overflow: hidden;
+      picture {
+        img {
+          border-radius: .2rem;
+          transition: .5s;
+          &:hover {
+            filter: blur(1px);
+            transform: scale(1.1,1.1);
+          }
+        }
+      }
+    }
+    &__content {
+      padding: .8rem 1.6rem;
+      box-shadow: none;
+      background-color: transparent;
+      position: initial;
+      width: 60%;
+    }
+    &__desc {
+      margin-bottom: 20px;
+    }
+    &__title::before {
+      content: none;
+    }
+  }
+
+  .blogposts {
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .post-card {
+    width: 48%;
+    transition: .5s;
+    margin-right: .7rem;
+    margin-bottom: 1rem;
+    height: 300px;
+    &:hover {
+      transform: translateY(-.5rem);
+    }
+    &__title {
+      transition: .3s;
+    }
+  }
+
+  #contact {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .contact__title {
+    padding-top: 7rem;
+  }
+
+  .form {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content {
+    max-width: 800px;
+    padding-left: 1.5rem;
+  }
+  #about {
+    display: flex;
+    > div {
+      width: 50%;
+    }
+    .about {
+      &__me {
+        margin-top: 6rem;
+        margin-left: 2rem;
+      }
+      &__content {
+        margin-bottom: 0;
+        padding: 0;
+      }
+    }
+  }
+  .post-card {
+    width: 31%;
+    height: 350px;
+    &__title {
+      h3 {
+        font-size: $fs-md;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1400px) {
+  body {
+    font-size: $fs-md
+  }
+  .content {
+    max-width: 900px;
+    padding-left: 0;
+  }
+  .post-card {
+    &__desc {
+      font-size: $fs-sm;
+    }
+    &__title {
+      h3 {
+        font-size: $fs-lg;
+      }
+    }
+  }
+  .project {
+    margin: 2rem 0 4rem;
+    &__cover {
+      width: 50%;
+      overflow: hidden;
+      picture {
+        img {
+          border-radius: .2rem;
+          transition: .5s;
+          &:hover {
+            filter: blur(1px);
+            transform: scale(1.1,1.1);
+          }
+        }
+      }
+    }
+    &__tech-list {
+      font-size: $fs-sm
+    }
+    &__content {
+      padding: 1.6rem;
+      width: 60%;
+    }
+    &__desc {
+      font-size: $fs-md;
+    }
+  }
+  .form {
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      > div {
+        width: 49%;
+      }
+    }
+  }
 }

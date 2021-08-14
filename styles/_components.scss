@@ -34,120 +34,174 @@
 
 /*    ||  NAVBAR     */
 
-.navbar {
-  width: 3.5rem;
-  background-color: $lightest-base;
-  box-shadow: $dark-box-shadown;
-  overflow: hidden;
-  position: fixed;
-  bottom: .5rem;
-  right: 1.25rem;
-  border-radius: 1.875rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 3rem;
-  padding-left: 0.5rem;
-  transition: width .5s;
-  z-index: 10;
-  &--show {
-    padding-right: 4.5rem;
-    padding-left: 1rem;
-    width: calc(100% - 2.5rem);
-  }
-  &__item {
-    height:  3.5rem;
-    background-color: transparent;
-    border: 0;
-    &--position {
-      position: absolute;
-      right: 0;
+.header__navbar {
+  .navbar {
+    transition: width .5s;
+    &__item {
+      background-color: transparent;
+      border: 0;
+      &--position {
+        display: none;
+      }
     }
-    &:nth-child(1) {
+    &__link {
+      height:  3.5rem;
       width: 3.5rem;
+      border: 3px solid $dark-slate;
+      border-radius: 3rem;
+      margin-bottom: .875rem;
+      display: flex;
+      align-items: center;
+      color: $dark-slate;
+      padding: 0 .8rem;
+      transition: .2s;
+      overflow: hidden;
+      background-color: $darkest-base;
+      &:hover {
+        color: $primary;
+        box-shadow: 0px 1px 10px 0px $primary;
+        border-color: $primary;
+        width: 100%;
+        transition: .5s;
+      }
+      &:hover > span {
+        opacity: 1;
+      }
+    }
+    &__link--active {
+      color: $primary;
+      box-shadow: 0px 1px 10px 0px $primary;
+      border-color: $primary;
+    }
+    &__text {
+      opacity: 0;
+      margin-left: .5rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    &__icon {
+      font-size: $fs-xl;
     }
   }
-  &__link {
+}
+
+.header__menu {
+  .navbar {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: $lightest-base;
+    box-shadow: $dark-box-shadown;
+    overflow: hidden;
+    position: fixed;
+    bottom: .5rem;
+    right: 1.25rem;
+    border-radius: 1.875rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: inherit;
-    height: inherit;
-    color: $slate;
-  }
-  &__link--active {
-    color: $primary;
-  }
-  &__text {
-    display: none;
-  }
-  &__toggler {
-    background-color: $dark-slate;
-    border-radius: 2.5rem;
-    border: 0;
-    &:focus-visible {
-      outline: none;
+    justify-content: space-between;
+    padding-right: 3rem;
+    padding-left: 0.5rem;
+    transition: width .5s;
+    z-index: 10;
+    &--show {
+      padding-right: 4.5rem;
+      padding-left: 1rem;
+      width: calc(100% - 2.5rem);
     }
-    &--collapsed {
-      background-color: $lightest-base;
-    }
-    &-icon {
-      display: block;
-      position: relative;
-      width: 1.3rem;
-      &-menu {
-        margin-left: 5px;
-        width: 1.5rem;
-        border: 1px solid $primary;
-        transition: .5s;
-        &::before {
-          transition: .5s;
-          content: '';
-          width: 1.8rem;
-          border: 1px solid $primary;
-          position: absolute;
-          top: 0.45rem;
-          right: -1px;
-        }
-        &::after {
-          transition: .5s;
-          content: '';
-          width: 1.8rem;
-          border: 1px solid $primary;
-          position: absolute;
-          bottom: 0.45rem;
-          right: -1px;
-        }
+    &__item {
+      height:  3.5rem;
+      background-color: transparent;
+      border: 0;
+      &--position {
+        position: absolute;
+        right: 0;
       }
-      &-close {
-        border-color: rgba($primary, 0);
-        margin-left: 8px;
-        transition: .5s;
-        &::before {
-          transition: .5s;
-          content: '';
-          width: 1.8rem;
-          border: 1px solid $primary;
-          position: absolute;
-          top: -1px;
-          transform: rotate(45deg);
-          right: 0;
-        }
-        &::after {
-          transition: .5s;
-          content: '';
-          width: 1.8rem;
-          border: 1px solid $primary;
-          position: absolute;
-          bottom: 0;
-          transform: rotate(-45deg);
-          right: 0;
-        }
+      &:nth-child(1) {
+        width: 3.5rem;
       }
     }
-  }
-  &__icon {
-    font-size: $fs-xl;
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: inherit;
+      height: inherit;
+      color: $slate;
+    }
+    &__link--active {
+      color: $primary;
+    }
+    &__text {
+      display: none;
+    }
+    &__toggler {
+      background-color: $dark-slate;
+      border-radius: 2.5rem;
+      border: 0;
+      &:focus-visible {
+        outline: none;
+      }
+      &--collapsed {
+        background-color: $lightest-base;
+      }
+      &-icon {
+        display: block;
+        position: relative;
+        width: 1.3rem;
+        &-menu {
+          margin-left: 5px;
+          width: 1.5rem;
+          border: 1px solid $primary;
+          transition: .5s;
+          &::before {
+            transition: .5s;
+            content: '';
+            width: 1.8rem;
+            border: 1px solid $primary;
+            position: absolute;
+            top: 0.45rem;
+            right: -1px;
+          }
+          &::after {
+            transition: .5s;
+            content: '';
+            width: 1.8rem;
+            border: 1px solid $primary;
+            position: absolute;
+            bottom: 0.45rem;
+            right: -1px;
+          }
+        }
+        &-close {
+          border-color: rgba($primary, 0);
+          margin-left: 8px;
+          transition: .5s;
+          &::before {
+            transition: .5s;
+            content: '';
+            width: 1.8rem;
+            border: 1px solid $primary;
+            position: absolute;
+            top: -1px;
+            transform: rotate(45deg);
+            right: 0;
+          }
+          &::after {
+            transition: .5s;
+            content: '';
+            width: 1.8rem;
+            border: 1px solid $primary;
+            position: absolute;
+            bottom: 0;
+            transform: rotate(-45deg);
+            right: 0;
+          }
+        }
+      }
+    }
+    &__icon {
+      font-size: $fs-xl;
+    }
   }
 }
 
@@ -290,6 +344,9 @@
   padding: 1.6rem;
   margin-bottom: .8rem;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
   &__top {
     display: flex;
     justify-content: space-between;
