@@ -110,18 +110,19 @@ mixin carousel(items)
             +post-card(item)
 
 mixin form
-  form.form(name="contact" method="POST" data-netlify="true")
+  form.form(id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mnqlopzl" method="POST" data-netlify="true")
     input(type="hidden" name="form-name" value="contact")
     .form__info
       .form__item
-        label(for="name")
+        label(for="full-name")
           i.material-icons-outlined person
-        input(type="text" name="name" id="name" required placeholder="¿Cual es tu nombre?")
+        input(type="text" name="name" id="full-name" required placeholder="¿Cual es tu nombre?")
       .form__item
-        label(for="email")
+        label(for="email-address")
           i.material-icons-outlined email
-        input(type="email" name="email" id="email" required placeholder="¿Cual es tu correo?")
+        input(type="email" name="_replyto" id="email-address" required placeholder="¿Cual es tu correo?")
     .form__item
       label(for="message")
-      textarea(name="", cols="30", rows="5" required placeholder="Dime que opinas de mi trabajo")
+      textarea(name="message" id="message", cols="30", rows="5" required placeholder="Dime que opinas de mi trabajo")
+      input(type="hidden" name="_subject" id="email-subject" value="Contact Form Submission")
     input(type="submit" value="Hablemos").btn

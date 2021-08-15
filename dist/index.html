@@ -221,21 +221,22 @@
       <section class="contact" id="contact">
         <h2 class="contact__title headline" id="contact2">Ponte en contacto</h2>
         <p class="contact__desc">Enviame tu propuesta o solo envía un saludo. La mejor manera de comunicarte conmigo es via DM en <a href="https://instagram.com/marskdev/">instagram</a> o solo pasa a saludar.</p>
-            <form class="form" name="contact" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact">
+            <form class="form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mnqlopzl" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="Portfolio">
               <div class="form__info">
                 <div class="form__item">
-                  <label for="name"><i class="material-icons-outlined">person</i></label>
-                  <input type="text" name="name" id="name" required placeholder="¿Cual es tu nombre?">
+                  <label for="full-name"><i class="material-icons-outlined">person</i></label>
+                  <input type="text" name="name" id="full-name" required placeholder="¿Cual es tu nombre?">
                 </div>
                 <div class="form__item">
-                  <label for="email"><i class="material-icons-outlined">email</i></label>
-                  <input type="email" name="email" id="email" required placeholder="¿Cual es tu correo?">
+                  <label for="email-address"><i class="material-icons-outlined">email</i></label>
+                  <input type="email" name="email" id="email-address" required placeholder="¿Cual es tu correo?">
                 </div>
               </div>
               <div class="form__item">
                 <label for="message"></label>
-                <textarea name="" cols="30" rows="5" required placeholder="Dime que opinas de mi trabajo"></textarea>
+                <textarea name="message" id="message" cols="30" rows="5" required placeholder="Dime que opinas de mi trabajo"></textarea>
+                <input type="hidden" name="_subject" id="email-subject" value="Marskdev - Portfolio">
               </div>
               <input class="btn" type="submit" value="Hablemos">
             </form><span class="contact__mail">marskdev@gmail.com</span>
