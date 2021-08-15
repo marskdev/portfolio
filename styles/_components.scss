@@ -36,6 +36,7 @@
 
 .header__navbar {
   .navbar {
+    display: none;
     transition: width .5s;
     &__item {
       background-color: transparent;

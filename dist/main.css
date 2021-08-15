@@ -340,6 +340,7 @@ section {
 
 /*    ||  NAVBAR     */
 .header__navbar .navbar {
+  display: none;
   transition: width 0.5s;
 }
 .header__navbar .navbar__item {
@@ -797,6 +798,9 @@ section {
     height: 100vh;
     display: flex;
     align-items: center;
+  }
+  .header__navbar .navbar {
+    display: initial;
   }
   .header__menu {
     display: none;
